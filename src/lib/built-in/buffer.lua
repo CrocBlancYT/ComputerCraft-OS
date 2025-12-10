@@ -54,7 +54,7 @@ end
 function os.newBuffer(xSize, ySize, backgroundColor)
     local instance = {
         xSize = xSize, ySize = ySize,
-        backgroundColor = backgroundColor
+        backgroundColor = colors.toBlit(backgroundColor)
     }
     
     return setmetatable(instance, {__index = buffer}):clear()
